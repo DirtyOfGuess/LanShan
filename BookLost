@@ -1,0 +1,21 @@
+public class BookLost extends Lost{
+    public BookLost() {
+    }
+
+    public BookLost(int lostTime, int number) {
+        super(lostTime, number);
+        this.type = "Book";
+    }
+    public BookLost(int lostTime , int number, String type) {
+        this.lostTime = lostTime;
+        this.number = number;
+        this.type = "Book";
+    }
+    public BookLost(int lostTime , int number, String type, String message) {
+        this.lostTime = lostTime;
+        this.number = number;
+        this.type = "Book";
+        this.message = message;
+    }
+
+}
