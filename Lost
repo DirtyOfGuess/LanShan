@@ -1,13 +1,13 @@
 public class Lost {
 
     //失物丢失时长
-    double lostTime;
+    private double lostTime;
     //失物编号
-    int number;
+    private int number;
     //失物种类
-    String type;
+    private String type;
     //补充物主信息
-    String message;
+    private String message;
 
     public Lost() {
     }
