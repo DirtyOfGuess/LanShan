@@ -1,0 +1,19 @@
+public class CardLost extends Lost{
+    public CardLost() {
+    }
+    public CardLost(int lostTime, int number) {
+        super(lostTime, number);
+        this.type = "Card";
+    }
+    public CardLost(int lostTime , int number, String type) {
+        this.lostTime = lostTime;
+        this.number = number;
+        this.type = "Card";
+    }
+    public CardLost(int lostTime , int number, String type, String message) {
+        this.lostTime = lostTime;
+        this.number = number;
+        this.type = "Card";
+        this.message = message;
+    }
+}
