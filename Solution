@@ -8,10 +8,10 @@ public class Solution {
     public static ArrayList<Lost> sortLost(ArrayList<Lost> lostArray) {
         for (int i = 0; i < lostArray.size(); i++) {
             for (int j = 0; j < lostArray.size()-i-1; j++)
-                if (lostArray.get(j).lostTime < lostArray.get(j + 1).lostTime) {
-                    double temp = lostArray.get(j + 1).lostTime;
-                    lostArray.get(j + 1).lostTime = lostArray.get(j).lostTime;
-                    lostArray.get(j).lostTime = temp;
+                if (lostArray.get(j).getLostTime() < lostArray.get(j + 1).getLostTime()) {
+                    double temp = lostArray.get(j + 1).getLostTime();
+                    lostArray.get(j + 1).setLostTime(lostArray.get(j).getLostTime());
+                    lostArray.get(j + 1).setLostTime(temp);
                 }
         }
         return lostArray;
@@ -26,7 +26,7 @@ public class Solution {
     public static ArrayList<Lost> selectByKeyword(ArrayList<Lost> lostArray,String keyword){
         ArrayList<Lost> selectLostArray = new ArrayList<>();
         for(int i = 0;i<lostArray.size();i++){
-            if(lostArray.get(i).type.contains(keyword)){
+            if(lostArray.get(i).getType().contains(keyword)){
                 selectLostArray.add(lostArray.get(i));
             }
             else{
@@ -36,3 +36,4 @@ public class Solution {
         return selectLostArray;
     }
 }
+
